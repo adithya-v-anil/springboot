@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Movie Website</title>
+	</head>
+<body>
+    <h1>Movie Website</h1>
+    <h3>Welcome all!</h3>	
+	<div th:utext="${title}"></div>	
+    <h2 th:text="${description}"></h2>
+	<div th:if="${isLoggedIn}">
+	        <h2>When an unexpected event shakes their world, he uses his wit and courage to protect his family</h2>
+	    </div>
+	    <div th:if="${!isLoggedIn}">
+	        <h2>Please log in to read the full movie description.</h2>
+	    </div>
+</body>
+</html>
