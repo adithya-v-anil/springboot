@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Insertion Example</title>
+</head>
+<body>
+    <h2 th:if="${message}" th:text=${message}></h2><br>
+    <form th:action="@{/save-product}" method="post">
+        <div>
+            <label> Name : <input type="text" name="name" /></label>
+        </div><br>
+        <div>
+            <label> Description : <textarea type="description" name="description" ></textarea></label>
+        </div><br>
+        <div>
+            <label> price: <input type="number" name="price" /></label>
+        </div><br>
+        <div>
+            <input type="submit" value="submit" />
+        </div>
+    </form>
+</body>
+</html>
