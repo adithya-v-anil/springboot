@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Phone List</title>
+</head>
+<body>
+    <h2>All Phones (Name and Price)</h2>
+    <table border="1">
+        <tr><th>Name</th><th>Price</th></tr>
+        <tr th:each="m : ${mobiles}">
+            <td th:text="${m[0]}"></td>
+            <td th:text="${m[1]}"></td>
+        </tr>
+    </table>
+
+    <h2>Phones Under ₹20,000</h2>
+    <table border="1">
+        <tr><th>Name</th><th>Brand</th><th>Price</th><th>Type</th></tr>
+        <tr th:each="m : ${under20K}">
+            <td th:text="${m.name}"></td>
+            <td th:text="${m.brand}"></td>
+            <td th:text="${m.price}"></td>
+            <td th:text="${m.type}"></td>
+        </tr>
+    </table>
+
+    <h2>Total Phones Grouped by Type</h2>
+    <table border="1">
+        <tr><th>Type</th><th>Count</th></tr>
+        <tr th:each="g : ${grouped}">
+            <td th:text="${g[0]}"></td>
+            <td th:text="${g[1]}"></td>
+        </tr>
+    </table>
+</body>
+</html>
