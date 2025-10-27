@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Phone</title>
+</head>
+<body>
+<h1>Update Phone</h1>
+<form action="#" th:action="@{/update/{id}(id=${phoneDetails.id})}" method="post">
+    <label>Name:</label>
+    <input type="text" name="name" th:value="${phoneDetails.name}" required /><br/>
+    <label>Description:</label>
+    <input type="text" name="description" th:value="${phoneDetails.description}" required /><br/>
+    <label>Price:</label>
+    <input type="text" name="price" th:value="${phoneDetails.price}" required /><br/>
+    <input type="submit" value="Update" />
+</form>
+</body>
+</html>
